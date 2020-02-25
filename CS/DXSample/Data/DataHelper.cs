@@ -312,9 +312,15 @@ namespace DXSample.Data {
         #endregion
 
         #region Resources
-        public static ResourceEntity Personal() { return new ResourceEntity() { Description = "Personal", Id = 1 }; }
-        public static ResourceEntity Education() { return new ResourceEntity() { Description = "Education", Id = 2 }; }
-        public static ResourceEntity Work() { return new ResourceEntity() { Description = "Work", Id = 3 }; }
+        public static ResourceEntity Personal() { 
+            return new ResourceEntity() { Description = "Personal", Id = 1 }; 
+        }
+        public static ResourceEntity Education() { 
+            return new ResourceEntity() { Description = "Education", Id = 2 };
+        }
+        public static ResourceEntity Work() { 
+            return new ResourceEntity() { Description = "Work", Id = 3 }; 
+        }
         #endregion
     }
 }

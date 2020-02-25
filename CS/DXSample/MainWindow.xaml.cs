@@ -2,6 +2,9 @@
 
 namespace DXSample {
     public partial class MainWindow : ThemedWindow {
-        public MainWindow() { InitializeComponent(); }
+        public MainWindow() {
+            InitializeComponent(); 
+        }
+
     }
 }
