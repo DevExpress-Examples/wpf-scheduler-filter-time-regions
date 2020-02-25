@@ -23,8 +23,17 @@ The main idea of this approach is to handle SchedulerControl's **FilterTimeRegio
 </dxsch:SchedulerControl.TimeRegionItems>
 ```
 
-The first Time Region highlights the launch time and should not be visible when MonthView becomes active. To hide this region in MonthView, we set the **e.Visible** property to **False** in the **FilterTimeRegion** event handler when **e.View** is **MonthView** and the Time Region's interval is less than 23 hours. We used our **DXEvent** to process the FilterTimeRegion event in XAML:
+The first Time Region highlights the launch time and should not be visible when MonthView becomes active. To hide this region in MonthView, we set the **e.Visible** property to **False** in the **FilterTimeRegion** event handler when **e.View** is **MonthView** and the Time Region's interval is less than 23 hours:
 
+```cs
+private void scheduler_FilterTimeRegion(object sender, FilterTimeRegionEventArgs e)
+{
+    e.Visible = e.TimeRegion.Interval.Duration.TotalHours > 23
+        || !(e.View is MonthView);
+}
+```
+
+We used our **DXEvent** to process the FilterTimeRegion event in XAML:
 
 ```xaml
 <dxsch:SchedulerControl ...
