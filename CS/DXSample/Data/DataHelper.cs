@@ -20,8 +20,7 @@ namespace DXSample.Data {
             DateTime patternStart = patternStartDate + patternTimeOfDay;
 
             TimeSpan patternDuration = TimeSpan.FromHours(1.5);
-            AppointmentEntity pattern = new AppointmentEntity()
-            {
+            AppointmentEntity pattern = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Pattern,
                 Start = patternStart,
                 End = patternStart + patternDuration,
@@ -37,11 +36,10 @@ namespace DXSample.Data {
             DateTime weekStartDate = DateTimeHelper.GetStartOfWeekUI(Start.Date, DayOfWeek.Monday).Date;
             DateTime changedStart = weekStartDate + patternTimeOfDay + TimeSpan.FromHours(-1);
             int changedOccurrenceIndex = (weekStartDate - patternStartDate).Days / 7 * 3;
-            if(changedOccurrenceIndex < 0)
+            if (changedOccurrenceIndex < 0)
                 return new List<AppointmentEntity>(1) { pattern };
 
-            AppointmentEntity changedOccurrence = new AppointmentEntity()
-            {
+            AppointmentEntity changedOccurrence = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.ChangedOccurrence,
                 Start = changedStart,
                 End = changedStart + patternDuration,
@@ -55,8 +53,7 @@ namespace DXSample.Data {
             int deletedOccurrenceIndex = changedOccurrenceIndex + 1;
             DateTime deletedStart = weekStartDate + patternTimeOfDay + TimeSpan.FromDays(2);
 
-            AppointmentEntity deletedOccurrence = new AppointmentEntity()
-            {
+            AppointmentEntity deletedOccurrence = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.DeletedOccurrence,
                 Start = deletedStart,
                 End = deletedStart + patternDuration,
@@ -72,8 +69,7 @@ namespace DXSample.Data {
 
         public static AppointmentEntity Dentist() {
             DateTime start = Start.AddDays(3).AddHours(19);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Normal,
                 Start = start,
                 End = start.AddHours(1),
@@ -88,8 +84,7 @@ namespace DXSample.Data {
             DateTime start = Start.AddDays(1).AddHours(20);
             DateTime newStart = start.AddMinutes(random.Next(0, 4) * 15);
             DateTime newEnd = newStart.AddMinutes(random.Next(4, 8) * 20);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Normal,
                 Start = newStart,
                 End = newEnd,
@@ -104,8 +99,7 @@ namespace DXSample.Data {
             DateTime start = Start.AddDays(6);
             DateTime newStart = start;
             DateTime newEnd = newStart.AddDays(1);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Normal,
                 Start = newStart,
                 End = newEnd,
@@ -121,8 +115,7 @@ namespace DXSample.Data {
             DateTime start = Start.AddDays(6);
             DateTime newStart = start;
             DateTime newEnd = newStart.AddDays(1);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Normal,
                 Start = newStart,
                 End = newEnd,
@@ -139,8 +132,7 @@ namespace DXSample.Data {
             DateTime start = Start;
             DateTime newStart = start;
             DateTime newEnd = newStart.AddDays(1);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Normal,
                 Start = newStart,
                 End = newEnd,
@@ -155,8 +147,7 @@ namespace DXSample.Data {
             DateTime start = Start;
             DateTime newStart = start;
             DateTime newEnd = newStart.AddDays(5);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Normal,
                 Start = newStart,
                 End = newEnd,
@@ -171,8 +162,7 @@ namespace DXSample.Data {
             DateTime start = Start.AddDays(1).AddHours(10);
             DateTime newStart = start;
             DateTime newEnd = newStart.AddHours(1);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Normal,
                 Start = newStart,
                 End = newEnd,
@@ -189,8 +179,7 @@ namespace DXSample.Data {
             DateTime start = Start.AddDays(2).AddHours(9);
             DateTime newStart = start;
             DateTime newEnd = newStart.AddHours(1);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Normal,
                 Start = newStart,
                 End = newEnd,
@@ -207,8 +196,7 @@ namespace DXSample.Data {
             DateTime start = Start.AddDays(3).AddHours(9);
             DateTime newStart = start;
             DateTime newEnd = newStart.AddHours(3);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Normal,
                 Start = newStart,
                 End = newEnd,
@@ -225,8 +213,7 @@ namespace DXSample.Data {
             DateTime start = Start.AddDays(4).AddHours(17);
             DateTime newStart = start;
             DateTime newEnd = newStart.AddHours(1);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Normal,
                 Start = newStart,
                 End = newEnd,
@@ -241,8 +228,7 @@ namespace DXSample.Data {
             DateTime start = Start.AddDays(-7).AddHours(11).AddMinutes(10);
             DateTime newStart = start;
             DateTime newEnd = newStart.AddHours(1.5);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Pattern,
                 Start = newStart,
                 End = newEnd,
@@ -263,8 +249,7 @@ namespace DXSample.Data {
             DateTime start = Start.AddHours(15).AddMinutes(40);
             DateTime newStart = start;
             DateTime newEnd = newStart.AddHours(1.5);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Pattern,
                 Start = newStart,
                 End = newEnd,
@@ -285,8 +270,7 @@ namespace DXSample.Data {
             DateTime start = Start.AddDays(3).AddHours(10).AddMinutes(10);
             DateTime newStart = start;
             DateTime newEnd = newStart.AddHours(1).AddMinutes(50);
-            var appt = new AppointmentEntity()
-            {
+            var appt = new AppointmentEntity() {
                 AppointmentType = (int)AppointmentType.Normal,
                 Start = newStart,
                 End = newEnd,
@@ -301,25 +285,25 @@ namespace DXSample.Data {
 
         public static DateTime GetMonday(DateTime date) {
             DayOfWeek dayOfWeek = date.DayOfWeek;
-            if(dayOfWeek == DayOfWeek.Monday)
+            if (dayOfWeek == DayOfWeek.Monday)
                 return date.Date;
-            if(dayOfWeek == DayOfWeek.Saturday)
+            if (dayOfWeek == DayOfWeek.Saturday)
                 return date.Date.AddDays(2);
-            if(dayOfWeek == DayOfWeek.Sunday)
+            if (dayOfWeek == DayOfWeek.Sunday)
                 return date.Date.AddDays(1);
             return date.Date.AddDays(-((int)dayOfWeek - 1));
         }
         #endregion
 
         #region Resources
-        public static ResourceEntity Personal() { 
-            return new ResourceEntity() { Description = "Personal", Id = 1 }; 
+        public static ResourceEntity Personal() {
+            return new ResourceEntity() { Description = "Personal", Id = 1 };
         }
-        public static ResourceEntity Education() { 
+        public static ResourceEntity Education() {
             return new ResourceEntity() { Description = "Education", Id = 2 };
         }
-        public static ResourceEntity Work() { 
-            return new ResourceEntity() { Description = "Work", Id = 3 }; 
+        public static ResourceEntity Work() {
+            return new ResourceEntity() { Description = "Work", Id = 3 };
         }
         #endregion
     }

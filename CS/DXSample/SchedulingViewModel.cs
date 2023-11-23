@@ -6,15 +6,13 @@ using System.Collections.ObjectModel;
 namespace DXSample {
     public class SchedulingViewModel : ViewModelBase {
         protected ObservableCollection<AppointmentEntity> _Appts = new ObservableCollection<AppointmentEntity>();
-        public ObservableCollection<AppointmentEntity> Appts
-        {
+        public ObservableCollection<AppointmentEntity> Appts {
             get { return this._Appts; }
         }
 
 
         protected ObservableCollection<ResourceEntity> _Calendars = new ObservableCollection<ResourceEntity>();
-        public ObservableCollection<ResourceEntity> Calendars
-        {
+        public ObservableCollection<ResourceEntity> Calendars {
             get { return this._Calendars; }
         }
 
