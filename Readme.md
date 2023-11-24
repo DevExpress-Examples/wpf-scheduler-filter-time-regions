@@ -52,7 +52,7 @@ You can use the [DXEvent](https://docs.devexpress.com/WPF/115778/mvvm-framework/
 
 ## Files to Review
 
-* [MainWindow.xaml](./CS/DXSample/MainWindow.xaml)
+* [MainWindow.xaml](./CS/DXSample/MainWindow.xaml) 
 
 ## Documentation
 
