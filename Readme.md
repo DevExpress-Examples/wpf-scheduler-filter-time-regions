@@ -52,7 +52,7 @@ For more information, please refer to these help topics:
 - [DXEvent](https://docs.devexpress.com/WPF/115778/mvvm-framework/dxbinding/dxevent)
 - [Language Specification](https://docs.devexpress.com/WPF/115777/mvvm-framework/dxbinding/language-specification)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-scheduler-filter-time-regions&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-scheduler-filter-time-regions&~~~was_helpful=no)
 
